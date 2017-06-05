@@ -2,7 +2,8 @@
 <html lang="uk">
 <!-- CHANGES Чи потрібно підключати css теми в Bootstrap 4 -->
 <!-- CHANGES Чи потрібно if lt IE 9 в Bootstrap 4 -->
-<!-- CHANGES Скачати локално файли Bootstrap 4 -->
+
+<!-- CHANGES Скачати локально файли Bootstrap 4 -->
 <!-- CHANGES Мінімізувати всі файли при завантаженні на хостинг-->
 
 <head>
@@ -12,6 +13,7 @@
     <title>Збірна України</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -39,22 +41,43 @@
         </div>
 
         <div class="row">
-            <div class="col offset-2">
+            <div class="col offset-3">
+                ЧС - 2006 (1/4); ЧЄ -2012, 2016 (група); ЧЄ (U-21) - 2006 (2 місце); ЧЄ (U-19) - 2009 (1 місце); ЧЄ (U-19) - 2004 (3 місце); ЧЄ (U-18) - 2000 (2 місце); ЧЄ (U-16) - 1994 (3 місце)
                 <table class="table table-bordered table-sm table-striped table-hover">
                     <thead class="thead-inverse">
                         <tr>
-                            <th class="text-center">прізвище</th>
+                            <th class="text-center">гравець</th>
                             <th class="text-center">матчів</th>
                             <th class="text-center">голів</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-primary">
+                        <tr class="bg-primary" data-toggle="tooltip" title="1994">
                             <td>Сергій ПЕРХУН</td>
                             <td>1</td>
                             <td>0</td>
                         </tr>
-                        <tr class="bg-success" data-toggle="tooltip" data-placement="left" title="2006">
+                        <tr class="bg-primary">
+                            <td>Максим ЛЕВИЦЬКИЙ</td>
+                            <td>8</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg-primary" data-toggle="tooltip" title="2000, 2001">
+                            <td>Віталій РУДЕНКО</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="bg-primary" data-toggle="tooltip" title="2006">
+                            <td>Олександр РИБКА</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg-primary" data-toggle="tooltip" title="2004">
+                            <td>Богдан ШУСТ</td>
+                            <td>4</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg-success" data-toggle="tooltip" title="2004, 2006">
                             <td>Дмитро ЧИГРИНСЬКИЙ</td>
                             <td>29</td>
                             <td>0</td>
@@ -64,54 +87,123 @@
                             <td>49</td>
                             <td>3</td>
                         </tr>
-                        <tr class="bg-success">
+                        <tr class="bg-success" data-toggle="tooltip" title="2000, 2001">
                             <td>Богдан ШЕРШУН</td>
                             <td>4</td>
                             <td>0</td>
                         </tr>
-                        <tr class="bg-success">
+                        <tr class="bg-success" data-toggle="tooltip" title="2004, 2006">
                             <td>Олександр ЯЦЕНКО</td>
                             <td>1</td>
                             <td>0</td>
+                        </tr>
+                        <tr class="bg-success">
+                            <td>Віталій МАНДЗЮК</td>
+                            <td>18</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg-success" data-toggle="tooltip" title="2004, 2006">
+                            <td>Григорій ЯРМАШ</td>
+                            <td>8</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg-success" data-toggle="tooltip" title="2006">
+                            <td>Олександр РОМАНЧУК</td>
+                            <td>8</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg-success">
+                            <td>Олег ДОПІЛКА</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg-success">
+                            <td>Євген СЕЛІН</td>
+                            <td>15</td>
+                            <td>1</td>
                         </tr>
                         <tr class="bg-warning">
                             <td>Олександр РИКУН</td>
                             <td>8</td>
                             <td>0</td>
                         </tr>
-                        <tr class="bg-warning">
+                        <tr class="bg-warning" data-toggle="tooltip" title="2004, 2006">
                             <td>Олександр АЛІЄВ</td>
                             <td>24</td>
                             <td>7</td>
                         </tr>
-                        <tr class="bg-warning">
+                        <tr class="bg-warning" data-toggle="tooltip" title="2000, 2001">
+                            <td>Руслан ВАЛЄЄВ</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="bg-warning" data-toggle="tooltip" title="2006">
                             <td>Адріан ПУКАНИЧ</td>
                             <td>2</td>
                             <td>1</td>
                         </tr>
-                        <tr class="bg-warning">
+                        <tr class="bg-warning" data-toggle="tooltip" title="2000">
+                            <td>Віталій ЛИСИЦЬКИЙ</td>
+                            <td>5</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg-warning" data-toggle="tooltip" title="2009">
                             <td>Кирило ПЕТРОВ</td>
                             <td>-</td>
                             <td>-</td>
                         </tr>
-                        <tr class="bg-danger">
+                        <tr class="bg-warning" data-toggle="tooltip" title="2004">
+                            <td>Костянтин КРАВЧЕНКО</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="bg-warning">
+                            <td>Дмитро ЛЬОПА</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="bg-danger" data-toggle="tooltip" title="2004, 2006">
                             <td>Артем МІЛЕВСЬКИЙ</td>
                             <td>42</td>
                             <td>7</td>
                         </tr>
-                        <tr class="bg-danger">
+                        <tr class="bg-danger" data-toggle="tooltip" title="2000, 2001">
                             <td>Олексій БЄЛІК</td>
                             <td>19</td>
                             <td>5</td>
                         </tr>
+                        <tr class="bg-danger" data-toggle="tooltip" title="1994">
+                            <td>Олег ЯЩУК</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="bg-danger">
+                            <td>Олександр МЕЛАЩЕНКО</td>
+                            <td>16</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="bg-danger" data-toggle="tooltip" title="2006">
+                            <td>Руслан ФОМІН</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
+                <i class="fa fa-star fa-fw" aria-hidden="true"></i>&nbsp;примітки:
+                <ul>
+                    <li><span class="badge badge-default">1994</span> - ЧЄ (U-16) (Ірландія)</li>
+                    <li><span class="badge badge-default">2000</span> - ЧЄ (U-18) (Німеччина)</li>
+                    <li><span class="badge badge-default">2001</span> - ЧС (U-20) (Аргентина)</li>
+                    <li><span class="badge badge-default">2004</span> - ЧЄ (U-19) (Швейцарія)</li>
+                    <li><span class="badge badge-default">2006</span> - ЧЄ (U-21) (Португалія)</li>
+                    <li><span class="badge badge-default">2009</span> - ЧЄ (U-19) (Україна)</li>
+                </ul>
             </div>
         </div>
 
         <footer class="row justify-content-center">
             ФУТЕР
-            <a href="#" class="btn btn-primary">ФФУ</a>
+            <a href="http://www.ffu.org.ua/" target="_blank" class="btn btn-primary" data-toggle="tooltip" title="Федерація Футболу України">ФФУ</a>
         </footer>
 
     </div>
