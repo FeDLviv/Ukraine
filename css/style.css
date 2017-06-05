@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Jura&subset=cyrillic');
+
+* {
+    font-family: Jura, sans-serif;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table td:nth-child(1) {
+    text-align: left;
+}
