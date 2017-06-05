@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Jura&subset=cyrillic');
-
 * {
     font-family: Jura, sans-serif;
 }
@@ -11,3 +10,17 @@
 .table td:nth-child(1) {
     text-align: left;
 }
+
+
+/*
+li {
+    white-space: nowrap;
+}
+
+@media (max-width: 48em) {
+
+    li {
+        font-size: 0.75rem;
+    }
+
+}*/
