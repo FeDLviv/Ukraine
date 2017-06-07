@@ -4,12 +4,18 @@ $('tr[data-toggle="tooltip"]').tooltip({
 
 $('[data-toggle="tooltip"]').tooltip();
 
-
 $('#main-nav').on('click', 'a', function (event) {
 	event.preventDefault();
-	var id = $(this).attr('href');
-	var top = $(id).offset().top;
+	var item = $(this);
+	var href = $(item).attr('href');
+	var place = $(href).offset().top;
 	$('body,html').animate({
-		scrollTop: top
-	}, 700);
+			scrollTop: place
+		}, 700,
+		function () {
+			$('.navbar-nav').find('.active').removeClass('active');
+			$(item).parent().addClass('active');
+		});
+
+
 });
