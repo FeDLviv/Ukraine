@@ -1,21 +1,19 @@
 $('tr[data-toggle="tooltip"]').tooltip({
-	placement: 'left'
+    placement: 'left'
 });
 
 $('[data-toggle="tooltip"]').tooltip();
 
 $('#main-nav').on('click', 'a', function (event) {
-	event.preventDefault();
-	var item = $(this);
-	var href = $(item).attr('href');
-	var place = $(href).offset().top;
-	$('body,html').animate({
-			scrollTop: place
-		}, 700,
-		function () {
-			$('.navbar-nav').find('.active').removeClass('active');
-			$(item).parent().addClass('active');
-		});
-
-
+    event.preventDefault();
+    var item = $(this);
+    var href = $(item).attr('href');
+    var place = $(href).offset().top;
+    $('body,html').animate({
+            scrollTop: place
+        }, 700,
+        function () {
+//            $('.navbar-nav').find('.active').removeClass('active');
+//            $(item).parent().addClass('active');
+        });
 });
