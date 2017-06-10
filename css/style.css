@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Jura&subset=cyrillic');
+
 @media (max-width: 48em) {
+
     .font-scale {
         font-size: 0.8em;
     }
+
 }
 
 * {
@@ -22,8 +25,25 @@ table td:nth-child(1) {
     text-align: left;
 }
 
+footer {
+    padding: 3em 1em 1em 1em;
+}
+
+a {
+    color: inherit;
+    transition: color 1.5s;
+}
+
+a:hover {
+    color: #a82e2e;
+}
+
 .jumbotron {
     margin-top: 4em;
+}
+
+.carousel-inner>.carousel-item>img {
+    margin: auto;
 }
 
 .card {
@@ -40,6 +60,6 @@ table td:nth-child(1) {
     color: #fff;
 }
 
-.carousel-inner>.carousel-item>img {
-    margin: auto;
+.btn-group {
+    display: flex;
 }
