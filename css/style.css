@@ -6,8 +6,12 @@
 		font-size: 0.8em;
 	}
 	
-	.carousel-inner>.carousel-item>img {
-		width: 100%;
+}
+
+@media (max-width: 991px) {
+	
+	.table-scale {
+		font-size: 0.8em;
 	}
 	
 }
@@ -44,6 +48,12 @@ footer {
 
 #main-carousel {
 	margin: 4em 1em 1em;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+	display: block !important;
 }
 
 .carousel-inner>.carousel-item>img {

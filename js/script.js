@@ -6,19 +6,22 @@ function mediaFunction() {
 	var rows = $('tr[data-toggle="tooltip"]');
 	var pills = $('.nav-pills');
 	rows.tooltip('dispose');
-	if ($(window).width() > 767) {
+	if ($(window).width() > 991) {
+
 		rows.tooltip({
 			placement: 'left'
 		});
-		pills.removeClass('flex-column')
-		pad = 60;
-
 	} else {
 		rows.tooltip({
 			placement: 'top'
 		});
-		pills.addClass('flex-column');
-		pad = 180;
+		if ($(window).width() > 767) {
+			pills.removeClass('flex-column')
+			pad = 60;
+		} else {
+			pills.addClass('flex-column');
+			pad = 180;
+		}
 	}
 }
 
@@ -55,30 +58,44 @@ $('#table').bootstrapTable({
 	pageList: [23, 30, 50, 100],
 	pageSize: 23,
 	search: true,
+	//showFooter: true,
 	columns: [{
 		field: 'player',
-		title: 'гравець'
+		title: 'гравець',
+		sortable: 'true',
+		// footerFormatter: 'Головний тренер:'
+    }, {
+		field: 'position',
+		title: 'позиція',
+		sortable: 'true',
     }, {
 		field: 'club',
-		title: 'клуб'
+		title: 'клуб',
+		sortable: 'true'
     }, {
 		field: 'birthday',
-		title: 'день народження'
+		title: 'день народження',
+		sortable: 'true'
     }, {
 		field: 'height',
-		title: 'зріст'
+		title: 'зріст',
+		sortable: 'true'
     }, {
 		field: 'weight',
-		title: 'вага'
+		title: 'вага',
+		sortable: 'true'
     }, {
 		field: 'match',
-		title: 'матчі'
+		title: 'матчі',
+		sortable: 'true'
     }, {
 		field: 'gool',
-		title: 'голи'
+		title: 'голи',
+		sortable: 'true'
     }],
 	data: [{
 		player: 'Андрій П\'ЯТОВ',
+		position: 'воротар',
 		club: 'Шахтар (Україна)',
 		birthday: '28.06.1984',
 		height: 190,
@@ -87,6 +104,7 @@ $('#table').bootstrapTable({
 		gool: 0
     }, {
 		player: 'Євген ХАЧЕРІДІ',
+		position: 'захисник',
 		club: 'Динамо (Україна)',
 		birthday: '28.07.1987',
 		height: 197,
@@ -95,6 +113,7 @@ $('#table').bootstrapTable({
 		gool: 3
     }, {
 		player: 'Ярослав РАКИЦЬКИЙ',
+		position: 'захисник',
 		club: 'Шахтар (Україна)',
 		birthday: '03.08.1989',
 		height: 180,
@@ -108,4 +127,14 @@ $('#table').bootstrapTable({
 	formatShowingRows: function (pageFrom, pageTo, totalRows) {
 		return 'Відображено з ' + pageFrom + ' по ' + pageTo + '. Всього: ' + totalRows;
 	}
+
+	//	footerStyle: function footerStyle(value, row, index) {
+	//		return {
+	//			css: {
+	//				'font-weight': 'bold',
+	//				border: 'none'
+	//			}
+	//		};
+	//	}
+
 });
