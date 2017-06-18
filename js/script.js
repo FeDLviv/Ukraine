@@ -6,6 +6,13 @@ var pad = 60;
 
 
 
+var onloadCallback = function () {
+    grecaptcha.render('recaptcha', {
+        'sitekey': '6 Ldg4CUUAAAAALlrP_Y_JvA2gu1k2OrxAOUkkQMh',
+        'theme': 'dark'
+    });
+};
+
 function sendEmail() {
     var msg = $.trim($('#form-mail-message').val());
     if (msg != '') {
@@ -150,6 +157,69 @@ $('#table').bootstrapTable({
         birthday: '20.04.1995',
         height: 186,
         weight: 73,
+        match: 5,
+        gool: 0
+    }, {
+        player: 'Тарас СТЕПАНЕНКО',
+        position: 'півзахисник',
+        club: 'Шахтар (Україна)',
+        birthday: '08.08.1989',
+        height: 181,
+        weight: 76,
+        match: 39,
+        gool: 3
+    }, {
+        player: 'Руслан МАЛІНОВСЬКИЙ',
+        position: 'півзахисник',
+        club: 'Генк (Бельгія)',
+        birthday: '08.08.1989',
+        height: 181,
+        weight: 79,
+        match: 5,
+        gool: 0
+    }, {
+        player: 'Денис ГАРМАШ',
+        position: 'півзахисник',
+        club: 'Динамо (Україна)',
+        birthday: '19.04.1990',
+        height: 187,
+        weight: 77,
+        match: 28,
+        gool: 2
+    }, {
+        player: 'Андрій ЯРМОЛЕНКО',
+        position: 'півзахисник',
+        club: 'Динамо (Україна)',
+        birthday: '23.10.1989',
+        height: 187,
+        weight: 76,
+        match: 70,
+        gool: 29
+    }, {
+        player: 'Євген КОНОПЛЯНКА',
+        position: 'півзахисник',
+        club: 'Шальке-04 (Німеччина)',
+        birthday: '29.09.1989',
+        height: 176,
+        weight: 69,
+        match: 63,
+        gool: 14
+    }, {
+        player: 'Євген СЕЛЕЗНЬОВ',
+        position: 'нападник',
+        club: 'Карабюкспор (Туреччина)',
+        birthday: '20.07.1985',
+        height: 188,
+        weight: 85,
+        match: 55,
+        gool: 11
+    }, {
+        player: 'Денис БОЙКО',
+        position: 'воротар',
+        club: 'Малага (Іспанія)',
+        birthday: '29.01.1988',
+        height: 197,
+        weight: 85,
         match: 5,
         gool: 0
     }],

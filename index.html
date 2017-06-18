@@ -43,9 +43,9 @@
     				<span class="navbar-toggler-icon"></span>
   				</button>
 
-                <a href="#" class="navbar-brand">
+                <span class="navbar-brand">
                     <i class="fa fa-futbol-o fa-lg" aria-hidden="true"></i>&nbsp;<span class="font-scale">Збірна України з футболу</span>
-                </a>
+                </span>
 
                 <!-- NOTE Менюшки перенести праворуч -->
                 <!-- TODO Зробити випадаюче меню?! -->
@@ -126,10 +126,10 @@
                         <div class="card-header bg-inverse">
                             <ul class="nav nav-pills nav-fill card-header-pills">
                                 <li class="nav-item">
-                                    <a href="#players" class="nav-link" data-toggle="tab">Склад</a>
+                                    <a href="#players" class="nav-link active" data-toggle="tab">Склад</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#unfulfilled" class="nav-link active" data-toggle="tab">"Не реалізовані"</a>
+                                    <a href="#unfulfilled" class="nav-link" data-toggle="tab">"Не реалізовані"</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#goleador" class="nav-link" data-toggle="tab">Голеадори</a>
@@ -142,12 +142,12 @@
 
                         <div class="tab-content">
 
-                            <div id="players" class="tab-pane">
+                            <div id="players" class="tab-pane active">
                                 <h2 class="card-title">Склад</h2>
                                 <table id="table" class="table-scale"></table>
                             </div>
 
-                            <div id="unfulfilled" class="tab-pane active">
+                            <div id="unfulfilled" class="tab-pane">
 
                                 <h2 class="card-title">Збірна не реалізованих</h2>
 
@@ -538,10 +538,10 @@
                         <label for="form-mail-message">Повідомлення:</label>
                         <textarea id="form-mail-message" name="message" placeholder="Я знайшов(ла) помилку на сайті..." class="form-control" rows="5"></textarea>
                     </form>
+                    <div id="recaptcha" class="mt-2"></div>
                 </div>
 
                 <div class="modal-footer">
-                    <div class="g-recaptcha" data-sitekey="6Ldg4CUUAAAAALlrP_Y_JvA2gu1k2OrxAOUkkQMh"></div>
                     <button onclick="sendEmail()" class="btn btn-primary" data-dismiss="modal">Надіслати</button>
                 </div>
 
@@ -556,7 +556,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
     <script src="js/script.js"></script>
 
