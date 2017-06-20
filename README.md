@@ -7,4 +7,4 @@
 
 In future:
 * [X-Editable](https://vitalets.github.io/x-editable/) 
-* [Easy Pie Chart](https://rendro.github.io/easy-pie-chart/))
+* [Easy Pie Chart](https://rendro.github.io/easy-pie-chart/)
