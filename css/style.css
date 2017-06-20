@@ -33,6 +33,10 @@ table {
     text-align: center;
 }
 
+table th {
+	text-align: center;
+}
+
 table td:nth-child(1) {
     text-align: left;
 }

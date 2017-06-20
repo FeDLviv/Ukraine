@@ -1,246 +1,261 @@
 var pad = 60;
 
 (function () {
-    emailjs.init("user_w20XTeQLkQ2DY0hLEByAL");
+	emailjs.init("user_w20XTeQLkQ2DY0hLEByAL");
 })();
 
-
-
 var onloadCallback = function () {
-    grecaptcha.render('recaptcha', {
-        'sitekey': '6 Ldg4CUUAAAAALlrP_Y_JvA2gu1k2OrxAOUkkQMh',
-        'theme': 'dark'
-    });
+	grecaptcha.render('recaptcha', {
+		sitekey: '6 Ldg4CUUAAAAALlrP_Y_JvA2gu1k2OrxAOUkkQMh',
+		theme: 'dark',
+		callback: function () {
+			$('#button-mail').prop('disabled', false);
+		}
+	});
 };
 
+
+
+
 function sendEmail() {
-    var msg = $.trim($('#form-mail-message').val());
-    if (msg != '') {
-        emailjs.send("testGmail", "template_MPQfHZwL", {
-            "message_html": msg
-        })
-    }
+	var msg = $.trim($('#form-mail-message').val());
+	if (msg != '') {
+		emailjs.send("testGmail", "template_MPQfHZwL", {
+			"message_html": msg
+		})
+	}
 }
 
 function mediaFunction() {
-    var rows = $('tr[data-toggle="tooltip"]');
-    var pills = $('.nav-pills');
-    rows.tooltip('dispose');
-    if ($(window).width() > 991) {
+	var rows = $('tr[data-toggle="tooltip"]');
+	var pills = $('.nav-pills');
+	rows.tooltip('dispose');
+	if ($(window).width() > 991) {
 
-        rows.tooltip({
-            placement: 'left'
-        });
-    } else {
-        rows.tooltip({
-            placement: 'top'
-        });
-        if ($(window).width() > 767) {
-            pills.removeClass('flex-column')
-            pad = 60;
-        } else {
-            pills.addClass('flex-column');
-            //            pad = 180;
-            pad = 215;
-        }
-    }
+		rows.tooltip({
+			placement: 'left'
+		});
+	} else {
+		rows.tooltip({
+			placement: 'top'
+		});
+		if ($(window).width() > 767) {
+			pills.removeClass('flex-column')
+			pad = 60;
+		} else {
+			pills.addClass('flex-column');
+			//            pad = 180;
+			pad = 215;
+		}
+	}
 }
 
 
 
 mediaFunction();
 
+$('#button-mail').prop('disabled', true);
+
 $(window).on('resize', mediaFunction);
 
 $('[data-toggle="tooltip"]').tooltip();
 
 $('body').scrollspy({
-    target: '#main-nav',
-    offset: pad
+	target: '#main-nav',
+	offset: pad
 });
 
 $('#main-nav').on('click', 'a', function (event) {
-    event.preventDefault();
-    var item = $(this);
-    var href = $(item).attr('href');
-    var place = $(href).offset().top - pad;
-    $('body,html').animate({
-        scrollTop: place
-    }, 700);
+	event.preventDefault();
+	var item = $(this);
+	var href = $(item).attr('href');
+	var place = $(href).offset().top - pad;
+	$('body,html').animate({
+		scrollTop: place
+	}, 700);
 });
 
 $('#table').bootstrapTable({
-    //striped: true,
-    //clickToSelect: true,
-    //showColumns: true,
-    //showRefresh: true,
-    //detailView: true,
-    pagination: true,
-    pageList: [23, 30, 50, 100],
-    pageSize: 23,
-    search: true,
-    //showFooter: true,
-    columns: [{
-        field: 'player',
-        title: 'гравець',
-        sortable: 'true',
-        // footerFormatter: 'Головний тренер:'
+	//striped: true,
+	//clickToSelect: true,
+	//showColumns: true,
+	//showRefresh: true,
+	//detailView: true,
+	pagination: true,
+	pageList: [23, 30, 50, 100],
+	pageSize: 23,
+	search: true,
+	//showFooter: true,
+	columns: [{
+		field: 'player',
+		title: 'гравець',
+		sortable: 'true',
+		// footerFormatter: 'Головний тренер:'
     }, {
-        field: 'position',
-        title: 'позиція',
-        sortable: 'true',
+		field: 'position',
+		title: 'позиція',
+		align: 'center',
+		sortable: 'true',
     }, {
-        field: 'club',
-        title: 'клуб',
-        sortable: 'true'
+		field: 'club',
+		title: 'клуб',
+		align: 'center',
+		sortable: 'true'
     }, {
-        field: 'birthday',
-        title: 'день народження',
-        sortable: 'true'
+		field: 'birthday',
+		title: 'день народження',
+		align: 'center',
+		sortable: 'true'
     }, {
-        field: 'height',
-        title: 'зріст',
-        sortable: 'true'
+		field: 'height',
+		title: 'зріст',
+		align: 'center',
+		sortable: 'true'
     }, {
-        field: 'weight',
-        title: 'вага',
-        sortable: 'true'
+		field: 'weight',
+		title: 'вага',
+		align: 'center',
+		sortable: 'true'
     }, {
-        field: 'match',
-        title: 'матчі',
-        sortable: 'true'
+		field: 'match',
+		title: 'матчі',
+		align: 'center',
+		sortable: 'true'
     }, {
-        field: 'gool',
-        title: 'голи',
-        sortable: 'true'
+		field: 'gool',
+		title: 'голи',
+		align: 'center',
+		sortable: 'true'
     }],
-    data: [{
-        player: 'Андрій П\'ЯТОВ',
-        position: 'воротар',
-        club: 'Шахтар (Україна)',
-        birthday: '28.06.1984',
-        height: 190,
-        weight: 78,
-        match: 74,
-        gool: 0
+	data: [{
+		player: 'Андрій П\'ЯТОВ',
+		position: 'воротар',
+		club: 'Шахтар (Україна)',
+		birthday: '28.06.1984',
+		height: 190,
+		weight: 78,
+		match: 74,
+		gool: 0
     }, {
-        player: 'Євген ХАЧЕРІДІ',
-        position: 'захисник',
-        club: 'Динамо (Україна)',
-        birthday: '28.07.1987',
-        height: 197,
-        weight: 80,
-        match: 45,
-        gool: 3
+		player: 'Євген ХАЧЕРІДІ',
+		position: 'захисник',
+		club: 'Динамо (Україна)',
+		birthday: '28.07.1987',
+		height: 197,
+		weight: 80,
+		match: 45,
+		gool: 3
     }, {
-        player: 'Ярослав РАКИЦЬКИЙ',
-        position: 'захисник',
-        club: 'Шахтар (Україна)',
-        birthday: '03.08.1989',
-        height: 180,
-        weight: 70,
-        match: 46,
-        gool: 4
+		player: 'Ярослав РАКИЦЬКИЙ',
+		position: 'захисник',
+		club: 'Шахтар (Україна)',
+		birthday: '03.08.1989',
+		height: 180,
+		weight: 70,
+		match: 46,
+		gool: 4
     }, {
-        player: 'Богдан БУТКО',
-        position: 'захисник',
-        club: 'Шахтар (Україна)',
-        birthday: '13.01.1991',
-        height: 180,
-        weight: 68,
-        match: 26,
-        gool: 0
+		player: 'Богдан БУТКО',
+		position: 'захисник',
+		club: 'Шахтар (Україна)',
+		birthday: '13.01.1991',
+		height: 180,
+		weight: 68,
+		match: 26,
+		gool: 0
     }, {
-        player: 'Едуард СОБОЛЬ',
-        position: 'захисник',
-        club: 'Зоря (Україна)',
-        birthday: '20.04.1995',
-        height: 186,
-        weight: 73,
-        match: 5,
-        gool: 0
+		player: 'Едуард СОБОЛЬ',
+		position: 'захисник',
+		club: 'Зоря (Україна)',
+		birthday: '20.04.1995',
+		height: 186,
+		weight: 73,
+		match: 5,
+		gool: 0
     }, {
-        player: 'Тарас СТЕПАНЕНКО',
-        position: 'півзахисник',
-        club: 'Шахтар (Україна)',
-        birthday: '08.08.1989',
-        height: 181,
-        weight: 76,
-        match: 39,
-        gool: 3
+		player: 'Тарас СТЕПАНЕНКО',
+		position: 'півзахисник',
+		club: 'Шахтар (Україна)',
+		birthday: '08.08.1989',
+		height: 181,
+		weight: 76,
+		match: 39,
+		gool: 3
     }, {
-        player: 'Руслан МАЛІНОВСЬКИЙ',
-        position: 'півзахисник',
-        club: 'Генк (Бельгія)',
-        birthday: '08.08.1989',
-        height: 181,
-        weight: 79,
-        match: 5,
-        gool: 0
+		player: 'Руслан МАЛІНОВСЬКИЙ',
+		position: 'півзахисник',
+		club: 'Генк (Бельгія)',
+		birthday: '08.08.1989',
+		height: 181,
+		weight: 79,
+		match: 5,
+		gool: 0
     }, {
-        player: 'Денис ГАРМАШ',
-        position: 'півзахисник',
-        club: 'Динамо (Україна)',
-        birthday: '19.04.1990',
-        height: 187,
-        weight: 77,
-        match: 28,
-        gool: 2
+		player: 'Денис ГАРМАШ',
+		position: 'півзахисник',
+		club: 'Динамо (Україна)',
+		birthday: '19.04.1990',
+		height: 187,
+		weight: 77,
+		match: 28,
+		gool: 2
     }, {
-        player: 'Андрій ЯРМОЛЕНКО',
-        position: 'півзахисник',
-        club: 'Динамо (Україна)',
-        birthday: '23.10.1989',
-        height: 187,
-        weight: 76,
-        match: 70,
-        gool: 29
+		player: 'Андрій ЯРМОЛЕНКО',
+		position: 'півзахисник',
+		club: 'Динамо (Україна)',
+		birthday: '23.10.1989',
+		height: 187,
+		weight: 76,
+		match: 70,
+		gool: 29
     }, {
-        player: 'Євген КОНОПЛЯНКА',
-        position: 'півзахисник',
-        club: 'Шальке-04 (Німеччина)',
-        birthday: '29.09.1989',
-        height: 176,
-        weight: 69,
-        match: 63,
-        gool: 14
+		player: 'Євген КОНОПЛЯНКА',
+		position: 'півзахисник',
+		club: 'Шальке-04 (Німеччина)',
+		birthday: '29.09.1989',
+		height: 176,
+		weight: 69,
+		match: 63,
+		gool: 14
     }, {
-        player: 'Євген СЕЛЕЗНЬОВ',
-        position: 'нападник',
-        club: 'Карабюкспор (Туреччина)',
-        birthday: '20.07.1985',
-        height: 188,
-        weight: 85,
-        match: 55,
-        gool: 11
+		player: 'Євген СЕЛЕЗНЬОВ',
+		position: 'нападник',
+		club: 'Карабюкспор (Туреччина)',
+		birthday: '20.07.1985',
+		height: 188,
+		weight: 85,
+		match: 55,
+		gool: 11
     }, {
-        player: 'Денис БОЙКО',
-        position: 'воротар',
-        club: 'Малага (Іспанія)',
-        birthday: '29.01.1988',
-        height: 197,
-        weight: 85,
-        match: 5,
-        gool: 0
+		player: 'Денис БОЙКО',
+		position: 'воротар',
+		club: 'Малага (Іспанія)',
+		birthday: '29.01.1988',
+		height: 197,
+		weight: 85,
+		match: 5,
+		gool: 0
     }],
-    formatSearch: function () {
-        return 'Пошук...';
-    },
-    formatShowingRows: function (pageFrom, pageTo, totalRows) {
-        return 'Відображено з ' + pageFrom + ' по ' + pageTo + '. Всього: ' + totalRows;
-    }
+	formatSearch: function () {
+		return 'Пошук...';
+	},
+	formatShowingRows: function (pageFrom, pageTo, totalRows) {
+		return 'Відображено з ' + pageFrom + ' по ' + pageTo + '. Всього: ' + totalRows;
+	}
 
-    //	footerStyle: function footerStyle(value, row, index) {
-    //		return {
-    //			css: {
-    //				'font-weight': 'bold',
-    //				border: 'none'
-    //			}
-    //		};
-    //	}
+	//	footerStyle: function footerStyle(value, row, index) {
+	//		return {
+	//			css: {
+	//				'font-weight': 'bold',
+	//				border: 'none'
+	//			}
+	//		};
+	//	}
 
 });
 
 $('.modal').on('hidden.bs.modal', function () {
-    $(this).find('form')[0].reset();
+	$(this).find('form')[0].reset();
+	$('#button-mail').prop('disabled', true);
+	grecaptcha.reset();
 });
