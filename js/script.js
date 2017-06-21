@@ -44,14 +44,17 @@ function mediaFunction() {
 
 function sendEmail() {
     var msg = $.trim($('#form-mail-message').val());
-    if (msg != '') {
+    if (msg !== '') {
         emailjs.send("testGmail", "template", {
             "message_html": msg
-        })
+        });
+        $("#alert-mail").fadeTo(2800, 1).slideUp(600);
     }
 }
 
 
+
+$("#alert-mail").hide();
 
 mediaFunction();
 
