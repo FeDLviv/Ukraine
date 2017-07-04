@@ -234,8 +234,8 @@ $('#table').bootstrapTable({
 	formatSearch: function () {
 		return 'Пошук...';
 	},
-	formatShowingtooltipRows: function (pageFrom, pageTo, totaltooltipRows) {
-		return 'Відображено з ' + pageFrom + ' по ' + pageTo + '. Всього: ' + totaltooltipRows;
+	formatShowingRows: function (pageFrom, pageTo, totalRows) {
+		return 'Відображено з ' + pageFrom + ' по ' + pageTo + '. Всього: ' + totalRows;
 	},
 	formatNoMatches() {
 		return 'Відповідних записів не знайдено';
